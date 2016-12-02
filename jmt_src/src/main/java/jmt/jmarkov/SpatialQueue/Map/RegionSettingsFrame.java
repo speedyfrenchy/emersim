@@ -1,23 +1,24 @@
 package jmt.jmarkov.SpatialQueue.Map;
 
-import jmt.jmarkov.SpatialQueue.Simulation.Client;
 import jmt.jmarkov.SpatialQueue.Simulation.ClientRegion;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 
 public class RegionSettingsFrame extends JFrame {
 
-    private Entity entity;
+    /*
+     * Provides a dialog to change region properties like name and arrival rate lambda
+     */
+
+    private Graphic graphic;
 
     private ClientRegion cr;
 
-    public RegionSettingsFrame(Entity entity, ClientRegion cr) {
-        this.entity = entity;
+    public RegionSettingsFrame(Graphic graphic, ClientRegion cr) {
+        this.graphic = graphic;
         this.cr = cr;
         init();
         show();
@@ -34,7 +35,7 @@ public class RegionSettingsFrame extends JFrame {
         delete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                entity.remove();
+                graphic.remove();
                 dispose();
             }
         });
@@ -46,13 +47,13 @@ public class RegionSettingsFrame extends JFrame {
         final JTextField lambda = new JTextField();
         lambda.setText(String.valueOf(cr.getLambda()));
 
-        final JTextField newName = new JTextField(entity.getName());
+        final JTextField newName = new JTextField(graphic.getName());
 
         JButton save = new JButton("Save");
         save.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                entity.rename(newName.getText());
+                graphic.rename(newName.getText());
                 cr.setLambda(Double.parseDouble(lambda.getText()));
                 dispose();
             }

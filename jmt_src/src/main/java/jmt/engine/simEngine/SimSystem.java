@@ -256,7 +256,7 @@ public class SimSystem {
 		return running;
 	}
 
-	// Entity service methods
+	// Graphic service methods
 
 	// Called by an entity just before it becomes non-RUNNABLE
 	//	static void paused() {

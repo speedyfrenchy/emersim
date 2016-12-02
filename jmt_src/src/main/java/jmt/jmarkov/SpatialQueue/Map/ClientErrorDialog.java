@@ -5,9 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ClientErrorDialog extends JFrame {
+class ClientErrorDialog extends JFrame {
 
-    public ClientErrorDialog() {
+    /*
+    * Dialog to notify the user of errors when placing a client region on the map
+    */
+
+    ClientErrorDialog() {
         init();
         show();
     }

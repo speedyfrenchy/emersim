@@ -77,7 +77,7 @@ public abstract class SimEntity {
 	protected abstract void body();
 
 	/**
-	 * check that the body of Entity is closed correctly
+	 * check that the body of Graphic is closed correctly
 	 */
 	private void exit() throws jmt.common.exception.NetException {
 		if (state == SimEntity.RUNNABLE) {

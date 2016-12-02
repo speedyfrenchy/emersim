@@ -675,7 +675,7 @@ public class NetNode extends SimEntity {
 		case QueueNetwork.REFERENCE_NODE:
 			iterator = Network.getReferenceNodes().listIterator();
 			while (iterator.hasNext()) {
-				//Entity.sim_schedule(((NetNode) Iterator.next()).Entity.get_id(), Delay, Tag, Data);
+				//Graphic.sim_schedule(((NetNode) Iterator.next()).Graphic.get_id(), Delay, Tag, Data);
 				simSchedule(iterator.next().getId(), Delay, Tag, Data);
 			}
 			break;
@@ -683,7 +683,7 @@ public class NetNode extends SimEntity {
 			//Iterator = Network.getReferenceNodes().listIterator();
 			iterator = Network.getNodes().listIterator();
 			while (iterator.hasNext()) {
-				//Entity.sim_schedule(((NetNode) Iterator.next()).Entity.get_id(), Delay, Tag, Data);
+				//Graphic.sim_schedule(((NetNode) Iterator.next()).Graphic.get_id(), Delay, Tag, Data);
 				simSchedule(iterator.next().getId(), Delay, Tag, Data);
 			}
 			break;

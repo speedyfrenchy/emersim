@@ -10,6 +10,10 @@ import static jmt.jmarkov.SpatialQueue.Map.MapConfig.map;
 
 class DirectionsJob implements Callable<DirectionsResult> {
 
+    /*
+     * Represents a call to the JxMaps API and when called returns the requested directions
+     */
+
     private MapConfig mapConfig;
     private TravelMode travelMode;
     private double lat1;
@@ -26,6 +30,7 @@ class DirectionsJob implements Callable<DirectionsResult> {
         this.lng2 = lng2;
     }
 
+    // Calls the JxMaps API and returns the result
     @Override
     public DirectionsResult call() throws Exception {
         // Creating a directions request

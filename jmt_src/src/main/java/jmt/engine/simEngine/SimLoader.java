@@ -916,7 +916,7 @@ public class SimLoader {
 
 	// An array of names for DOM node-types
 	// (Array indices = nodeType() values.)
-	static final String[] typeName = { "none", "Element", "Attr", "Text", "CDATA", "EntityRef", "Entity", "ProcInstr", "Comment", "Document",
+	static final String[] typeName = { "none", "Element", "Attr", "Text", "CDATA", "EntityRef", "Graphic", "ProcInstr", "Comment", "Document",
 			"DocType", "DocFragment", "Notation", };
 
 	/**
